@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "MADToken",
+    "name": "Mutually Assured Destruction",
+    "symbol": "MAD",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xa0df17b5ac76ababa36e1450e2cbcd18a620c845",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "2000000000000000000000000",
+    "remainderTo": "0x1ee3ffadfe138415a2ddaedeebe5f46616fa413d"
+  },
+  "notes": "MADToken (src/MADToken.sol) is a fixed-supply OpenZeppelin ERC-20 named Mutually Assured Destruction with symbol MAD and 18 decimals. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 tokens (1000000000000000000000000000 minor units, the INITIAL_SUPPLY constant) once to msg.sender, which is the launch factory. There is no owner, minter, pauser, blacklist, burn, tax, fee-on-transfer, upgrade or initialization function; transfers deliver exactly the requested amount, so the swarm share, the pool seed, the remainder and trading flows all move whole. The supply cannot grow after deployment. There are no application contracts. The pool pairs with FWA at 0xa0df17b5ac76ababa36e1450e2cbcd18a620c845 at the launch policy's 1.25% fee with tick spacing 60; pool.initialPrice is provenance only, and the deployer derives the opening price from economics.initialMarketCapWei and the supply. Economics are the requester's: 80% of the supply seeds the pool at a 2,000,000 FWA opening market cap and the remainder of the requester's share goes to 0x1ee3ffadfe138415a2ddaedeebe5f46616fa413d. The swarm's 10% is taken by the factory and is not written here."
+}
